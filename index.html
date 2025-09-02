@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos del Siglo XX - Proyecto Escolar</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-clock" aria-hidden="true"></i>
+                <h1>Objetos del Siglo XX</h1>
+            </div>
+            <nav class="nav" aria-label="Navegación principal">
+                <ul>
+                    <li><a href="#inicio" class="nav-link active">Inicio</a></li>
+                    <li><a href="#galeria" class="nav-link">Galería</a></li>
+                    <li><a href="#acerca" class="nav-link">Acerca</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Página de Inicio -->
+        <section id="inicio" class="page active" aria-labelledby="titulo-inicio">
+            <!-- Hero Section -->
+            <div class="hero">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h2 id="titulo-inicio">Descubre la Evolución de los Objetos</h2>
+                        <p>Explora cómo la innovación y el diseño transformaron nuestra vida cotidiana a través de los objetos más revolucionarios de los últimos 100 años.</p>
+                        <button class="btn-primary" data-navigate="galeria">Explorar Colección</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Categorías -->
+            <div class="container">
+                <section class="categorias-section" aria-labelledby="titulo-categorias">
+                    <h2 id="titulo-categorias">Explora por Categorías</h2>
+                    <div class="categorias-grid">
+                        <button class="categoria-card" data-categoria="medicina">
+                            <div class="categoria-icon medicina">
+                                <i class="fas fa-stethoscope" aria-hidden="true"></i>
+                            </div>
+                            <h3>Medicina</h3>
+                            <p>Avances médicos revolucionarios</p>
+                        </button>
+                        <button class="categoria-card" data-categoria="automoviles">
+                            <div class="categoria-icon automoviles">
+                                <i class="fas fa-car" aria-hidden="true"></i>
+                            </div>
+                            <h3>Automóviles</h3>
+                            <p>Evolución del transporte</p>
+                        </button>
+                        <button class="categoria-card" data-categoria="computadoras">
+                            <div class="categoria-icon computadoras">
+                                <i class="fas fa-desktop" aria-hidden="true"></i>
+                            </div>
+                            <h3>Computadoras</h3>
+                            <p>Historia de la tecnología</p>
+                        </button>
+                        <button class="categoria-card" data-categoria="muebles">
+                            <div class="categoria-icon muebles">
+                                <i class="fas fa-couch" aria-hidden="true"></i>
+                            </div>
+                            <h3>Muebles</h3>
+                            <p>Diseño y funcionalidad</p>
+                        </button>
+                    </div>
+                </section>
+
+                <!-- Timeline -->
+                <section class="timeline-section" aria-labelledby="titulo-timeline">
+                    <h2 id="titulo-timeline">Línea de Tiempo</h2>
+                    <div class="timeline-grid">
+                        <button class="timeline-card" data-decada="1900-1910">
+                            <i class="fas fa-calendar" aria-hidden="true"></i>
+                            <span>1900-1910</span>
+                        </button>
+                        <button class="timeline-card" data-decada="1910-1920">
+                            <i class="fas fa-calendar" aria-hidden="true"></i>
+                            <span>1910-1920</span>
+                        </button>
+                        <button class="timeline-card" data-decada="1920-1930">
+                            <i class="fas fa-calendar" aria-hidden="true"></i>
+                            <span>1920-1930</span>
+                        </button>
+                        <button class="timeline-card" data-decada="1930-1940">
+                            <i class="fas fa-calendar" aria-hidden="true"></i>
+                            <span>1930-1940</span>
+                        </button>
+                        <button class="timeline-card" data-decada="1940-1950">
+                            <i class="fas fa-calendar" aria-hidden="true"></i>
+                            <span>1940-1950</span>
+                        </button>
+                    </div>
+                </section>
+            </div>
+        </section>
+
+        <!-- Página de Galería -->
+        <section id="galeria" class="page" aria-labelledby="titulo-galeria">
+            <div class="container">
+                <h2 id="titulo-galeria">Galería de Objetos</h2>
+                <!-- Filtros -->
+                <form class="filtros" aria-label="Filtros de búsqueda">
+                    <div class="filtros-group">
+                        <label for="filtro-decada">
+                            <i class="fas fa-filter" aria-hidden="true"></i>
+                            Década:
+                        </label>
+                        <select id="filtro-decada" name="decada">
+                            <option value="">Todas las décadas</option>
+                            <option value="1900-1910">1900-1910</option>
+                            <option value="1910-1920">1910-1920</option>
+                            <option value="1920-1930">1920-1930</option>
+                            <option value="1930-1940">1930-1940</option>
+                            <option value="1940-1950">1940-1950</option>
+                            <option value="1950-1960">1950-1960</option>
+                            <option value="1960-1970">1960-1970</option>
+                            <option value="1970-1980">1970-1980</option>
+                            <option value="1980-1990">1980-1990</option>
+                        </select>
+
+                        <label for="filtro-categoria">Categoría:</label>
+                        <select id="filtro-categoria" name="categoria">
+                            <option value="">Todas las categorías</option>
+                            <option value="medicina">Medicina</option>
+                            <option value="automoviles">Automóviles</option>
+                            <option value="computadoras">Computadoras</option>
+                            <option value="muebles">Muebles</option>
+                        </select>
+
+                        <button type="button" class="btn-secondary" id="btn-limpiar">Limpiar</button>
+                    </div>
+                    <div class="busqueda">
+                        <label for="buscar" class="sr-only">Buscar objetos</label>
+                        <i class="fas fa-search" aria-hidden="true"></i>
+                        <input type="text" id="buscar" placeholder="Buscar objetos...">
+                    </div>
+                </form>
+
+                <!-- Resultados -->
+                <div class="resultados">
+                    <p id="contador-resultados">Cargando objetos...</p>
+                </div>
+
+                <!-- Grid de objetos -->
+                <div id="objetos-grid" class="objetos-grid" aria-live="polite">
+                    <!-- Los objetos se cargarán aquí dinámicamente -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Página Acerca -->
+        <article id="acerca" class="page" aria-labelledby="titulo-acerca">
+            <div class="container">
+                <div class="acerca-content">
+                    <h2 id="titulo-acerca">Acerca del Proyecto</h2>
+                    <p>Este proyecto escolar forma parte de la práctica "Introducción a las Aplicaciones Web" y tiene como objetivo mostrar la evolución de los objetos cotidianos a lo largo del siglo XX.</p>
+                    
+                    <h3>Objetivos del Proyecto</h3>
+                    <ul>
+                        <li>Crear una aplicación web funcional con HTML, CSS y JavaScript</li>
+                        <li>Implementar una base de datos para almacenar información</li>
+                        <li>Desarrollar un backend con Node.js y Express</li>
+                        <li>Mostrar la evolución tecnológica y de diseño del siglo XX</li>
+                    </ul>
+
+                    <h3>Tecnologías Utilizadas</h3>
+                    <div class="tecnologias">
+                        <span class="tech-badge">HTML5</span>
+                        <span class="tech-badge">CSS3</span>
+                        <span class="tech-badge">JavaScript</span>
+                        <span class="tech-badge">Node.js</span>
+                        <span class="tech-badge">MySQL</span>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Objetos del Siglo XX | Proyecto escolar</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
